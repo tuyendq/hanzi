@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +10,22 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="js/hanzi-writer.js"></script>
 </head>
+
 <body>
-
-    <div class="character-target" id="character-target-div"></div>
-
+    <div id="wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" id="grid-background-target">
+            <line x1="0" y1="0" x2="600" y2="0" stroke="#111" />
+            <line x1="0" y1="0" x2="0" y2="600" stroke="#111" />
+            <line x1="0" y1="0" x2="600" y2="600" stroke="#DDD" />
+            <line x1="0" y1="600" x2="600" y2="600" stroke="#111" />
+            <line x1="600" y1="600" x2="600" y2="0" stroke="#111" />
+            <line x1="600" y1="0" x2="0" y2="600" stroke="#DDD" />
+            <line x1="300" y1="0" x2="300" y2="600" stroke="#DDD" />
+            <line x1="0" y1="300" x2="600" y2="300" stroke="#DDD" />
+        </svg>
+    </div>
     <script>
-        var writer = HanziWriter.create('character-target-div', '我', {
-            width: 500,
-            height: 500,
-            padding: 10,
-            strokeColor: '#000000',
-            radicalColor: '#5A0008'
-        });
-    </script>
-
-    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" id="grid-background-target">
-        <line x1="0" y1="0" x2="600" y2="600" stroke="#DDD" />
-        <line x1="600" y1="0" x2="0" y2="600" stroke="#DDD" />
-        <line x1="300" y1="0" x2="300" y2="600" stroke="#DDD" />
-        <line x1="0" y1="300" x2="600" y2="300" stroke="#DDD" />
-    </svg>
-    <script>
-        var writer = HanziWriter.create('grid-background-target', '酷', {
+        var writer = HanziWriter.create('grid-background-target', '和', {
             width: 600,
             height: 600,
             padding: 10,
@@ -39,6 +34,6 @@
         });
     </script>
 
-    
 </body>
+
 </html>
