@@ -2630,6 +2630,7 @@ module.exports = RenderTarget;
 
 var VERSION = '2.0';
 var getCharDataUrl = function getCharDataUrl(char) {
+  // return 'http://www.practicehabits.net/雙.json';
   return 'https://cdn.jsdelivr.net/npm/hanzi-writer-data@' + VERSION + '/' + char + '.json';
 };
 

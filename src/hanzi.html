@@ -16,8 +16,6 @@
 </head>
 
 <body>
-    <div id="container1"></div>
-    <!--
     <div id="svg-container">
         <svg xmlns="https://www.w3.org/2000/svg" id="grid-background-target">
             <line x1="0" y1="0" x2="600" y2="0" stroke="#111" />
@@ -30,21 +28,26 @@
             <line x1="0" y1="300" x2="600" y2="300" stroke="#DDD" />
         </svg>
     </div>
--->
-<!--
+
+    <div id="caption"></div>
+
     <script>
-        var char = '粉' // '凡' // '仙' // '診' //'诊' // '心' // '羊' // '善' // '和';
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const char = urlParams.get('char') || '和';
+        const width = urlParams.get('width') || 600;
+
         var writer = HanziWriter.create('grid-background-target', char, {
-            width: 600,
-            height: 600,
+            width: width,
+            height: width,
             padding: 10,
             strokeColor: '#000000',
             // strokeColor: '#5A0008',
             radicalColor: '#5A0008'
         });
+        document.getElementById("caption").innerHTML = char;
     </script>
--->
-    <script src='js/grid.js'></script>
+
 </body>
 
 </html>
