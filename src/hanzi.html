@@ -36,12 +36,13 @@
         const urlParams = new URLSearchParams(queryString);
         const char = urlParams.get('char') || '和';
         const width = urlParams.get('width') || 600;
+        const strokeColor = urlParams.get('strokeColor') || '#000000'
 
         var writer = HanziWriter.create('grid-background-target', char, {
             width: width,
             height: width,
             padding: 10,
-            strokeColor: '#000000',
+            strokeColor: strokeColor,
             // strokeColor: '#5A0008',
             radicalColor: '#5A0008'
         });
