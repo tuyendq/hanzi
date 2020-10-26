@@ -27,14 +27,20 @@
             <line x1="0" y1="300" x2="600" y2="300" stroke="#DDD" />
         </svg>
     </div>
+    <div id="caption"></div>
     <script>
-        var writer = HanziWriter.create('grid-background-target', '和', {
+        var char = '軍'//'止'//'行'//'亍'//'彳'//'泪'//'泣'//'彡'// '手'//'先'//'氵'//'洗'//'今'//'念'//'弗'//'拂'//'佛'//'怫'//'甭'//'否'//'禪'
+        var writer = HanziWriter.create('grid-background-target', char, {
             width: 600,
             height: 600,
             padding: 10,
-            strokeColor: '#000000',
+            strokeColor: '#5A0008',
+            // strokeColor: '#000000',
             radicalColor: '#5A0008'
         });
+    </script>
+    <script>
+        document.getElementById("caption").textContent = char;
     </script>
 
 </body>
