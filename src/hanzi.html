@@ -36,15 +36,15 @@
         const urlParams = new URLSearchParams(queryString);
         const char = urlParams.get('char') || '和';
         const width = urlParams.get('width') || 600;
-        const strokeColor = urlParams.get('strokeColor') || '#000000'
+        const strokeColor = urlParams.get('strokeColor') || '#000000';
+        const radicalColor = urlParams.get('radicalColor') || '#5A0008';
 
         var writer = HanziWriter.create('grid-background-target', char, {
             width: width,
             height: width,
             padding: 10,
             strokeColor: strokeColor,
-            // strokeColor: '#5A0008',
-            radicalColor: '#5A0008'
+            radicalColor: radicalColor
         });
         document.getElementById("caption").innerHTML = char;
     </script>
