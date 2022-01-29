@@ -32,29 +32,23 @@
     </div>
     <div id="caption"></div>
     <script>
-<<<<<<< HEAD:src/hanzi.html
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const char = urlParams.get('char') || '和';
         const width = urlParams.get('width') || 600;
         const strokeColor = urlParams.get('strokeColor') || '#000000';
         const radicalColor = urlParams.get('radicalColor') || '#5A0008';
-=======
         var char = '軍'//'止'//'行'//'亍'//'彳'//'泪'//'泣'//'彡'// '手'//'先'//'氵'//'洗'//'今'//'念'//'弗'//'拂'//'佛'//'怫'//'甭'//'否'//'禪'
->>>>>>> ac10030bb133f79cdf47d31a6f891bb13cbbb98c:src/char.html
 
         var writer = HanziWriter.create('grid-background-target', char, {
             width: 600,
             height: 600,
             padding: 10,
-<<<<<<< HEAD:src/hanzi.html
             strokeColor: strokeColor,
-            radicalColor: radicalColor
-=======
+            radicalColor: radicalColor,
             strokeColor: '#5A0008',
             // strokeColor: '#000000',
             radicalColor: '#5A0008'
->>>>>>> ac10030bb133f79cdf47d31a6f891bb13cbbb98c:src/char.html
         });
     </script>
     <script>
