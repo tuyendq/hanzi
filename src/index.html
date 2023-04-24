@@ -12,7 +12,8 @@
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="icons/favicon-16x16.png">
-    <script src="js/hanzi-writer.min.js"></script>
+    <!-- <script src="js/hanzi-writer.min.js"></script> -->
+    <script src="js/hanzi-writer.js"></script>
 </head>
 
 <body>
@@ -29,7 +30,8 @@
         </svg>
     </div>
 
-    <div id="caption"></div>
+    <div class="center"><div id="caption"></div></div>
+    <div class="center"><button id="animate-button">Animate</button></div>
 
     <script>
         const queryString = window.location.search;
@@ -46,6 +48,7 @@
             radicalColor: '#5A0008'
         });
         document.getElementById("caption").innerHTML = char;
+        document.getElementById("animate-button").addEventListener('click', function(){writer.animateCharacter();});
     </script>
     <!-- Radical color: //?char=%E5%B7%B1&strokeColor=%235A0008-->
 </body>
