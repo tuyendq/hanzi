@@ -30,7 +30,12 @@
             <line x1="0" y1="300" x2="600" y2="300" stroke="#DDD" />
         </svg>
     </div>
-    <div id="caption"></div>
+    <div class="center" id="caption"></div>
+    <div class="center">
+      <button id="animate-button">Animate</button>
+      <button id="quiz-button">Give it a try!</button>
+    </div>
+    
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -38,7 +43,7 @@
         const width = urlParams.get('width') || 600;
         const strokeColor = urlParams.get('strokeColor') || '#000000';
         const radicalColor = urlParams.get('radicalColor') || '#5A0008';
-        var char = '軍'//'止'//'行'//'亍'//'彳'//'泪'//'泣'//'彡'// '手'//'先'//'氵'//'洗'//'今'//'念'//'弗'//'拂'//'佛'//'怫'//'甭'//'否'//'禪'
+        // var char = '軍'//'止'//'行'//'亍'//'彳'//'泪'//'泣'//'彡'// '手'//'先'//'氵'//'洗'//'今'//'念'//'弗'//'拂'//'佛'//'怫'//'甭'//'否'//'禪'
 
         var writer = HanziWriter.create('grid-background-target', char, {
             width: 600,
@@ -46,13 +51,15 @@
             padding: 10,
             strokeColor: strokeColor,
             radicalColor: radicalColor,
-            strokeColor: '#5A0008',
+            // strokeColor: '#5A0008',
             // strokeColor: '#000000',
-            radicalColor: '#5A0008'
+            // radicalColor: '#5A0008'
         });
     </script>
     <script>
         document.getElementById("caption").textContent = char;
+        document.getElementById("animate-button").addEventListener('click', function(){writer.animateCharacter();});
+        document.getElementById("quiz-button").addEventListener('click', function(){writer.quiz();});
     </script>
 
 </body>
