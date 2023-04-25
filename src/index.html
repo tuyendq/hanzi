@@ -31,7 +31,10 @@
     </div>
 
     <div class="center"><div id="caption"></div></div>
-    <div class="center"><button id="animate-button">Animate</button></div>
+    <div class="center">
+      <button id="animate-button">Animate</button>
+      <button id="quiz-button">Give it a try!</button>
+    </div>
 
     <script>
         const queryString = window.location.search;
@@ -49,6 +52,7 @@
         });
         document.getElementById("caption").innerHTML = char;
         document.getElementById("animate-button").addEventListener('click', function(){writer.animateCharacter();});
+        document.getElementById("quiz-button").addEventListener('click', function(){writer.quiz();});
     </script>
     <!-- Radical color: //?char=%E5%B7%B1&strokeColor=%235A0008-->
 </body>
